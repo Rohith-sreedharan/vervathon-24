@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERVE 2k24 - Sona College of Technology</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a3c6ff, #f0e5ff);
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab {
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .tab a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            /* Rounded top corners */
+        }
+
+        .tab a:hover {
+            background: #e8f0fe;
+        }
+
+        .tab a.active {
+            background: #ffffff;
+            color: #007bff;
+            font-weight: bold;
+            border-bottom: 1px solid #ffffff;
+            /* Match with background */
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin: 0 10px;
+            flex: 1;
+            /* Allow tab content to fill the remaining space */
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            text-align: center;
+            /* Center text */
+        }
+
+        .activeTab {
+            display: block;
+            /* Show the active tab's content */
+        }
+
+        footer {
+            background: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            /* Push footer to the bottom */
+        }
+
+        .content {
+            margin-top: 20px;
+            /* Space above the content */
+            font-size: 28px;
+            /* Font size for developers */
+        }
+
+        .tools-content {
+            background: linear-gradient(135deg, #ffecb3, #ffcc80);
+            /* Gradient background */
+            border-radius: 5px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the section */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tools-content p {
+            font-weight: bold;
+            /* Bold text */
+            margin: 10px 0;
+            /* Margin between paragraphs */
+            font-size: 36px;
+            /* Increased font size */
+        }
+
+        .powerbi {
+            color: #0072B9;
+            /* Color for Power BI */
+        }
+
+        .excel {
+            color: #F2511B;
+            /* Color for Excel */
+        }
+
+        .contact-content {
+            background: linear-gradient(135deg, #d1c4e9, #e1bee7);
+            /* Gradient background */
+            border-radius: 5px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the section */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 28px;
+            /* Same font size as developers */
+        }
+
+        .contact-content p {
+            font-weight: bold;
+            /* Bold text */
+            margin: 10px 0;
+            /* Margin between paragraphs */
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            const tabContents = document.getElementsByClassName('tabcontent');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = 'none'; // Hide all tab contents
+            }
+            const tabs = document.getElementsByClassName('tablink');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active'); // Remove active class from all tabs
+            }
+            document.getElementById(tabName).style.display = 'block'; // Show the selected tab
+            document.querySelector(`a[onclick="openTab('${tabName}')"]`).classList.add('active'); // Add active class to the clicked tab
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vervathon 2k24 - Sona College of Technology</h1>
+    </header>
+<!-- 
+    <div class="tab">
+        <a class="tablink active" href="javascript:void(0)" onclick="openTab('home')">Home</a>
+        <a class="tablink" href="javascript:void(0)" onclick="openTab('developers')">Developers</a>
+        <a class="tablink" href="javascript:void(0)" onclick="openTab('tools')">Tools Used</a>
+        <a class="tablink" href="javascript:void(0)" onclick="openTab('techstack')">Tech Stack</a>
+        <a class="tablink" href="javascript:void(0)" onclick="openTab('contact')">Contact</a>
+    </div> -->
+
+    <div id="home" class="tabcontent activeTab">
+        <h2>Team Sparkles Financial Report</h2>
+        <iframe title="Verve-TeamSparkles" width="1140" height="541.25"
+            src="https://app.powerbi.com/reportEmbed?reportId=850ca8d3-d381-49e8-961e-938a6ee242fa&autoAuth=true&ctid=a5bd300c-c3b3-41d8-87e0-1f5c8d364af3"
+            frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div id="developers" class="tabcontent">
+        <h2>Developers</h2>
+        <div class="content">
+            <p>SV Rohith - <strong>AI & DS Department</strong></p>
+            <p>B. Vignesh - <strong>AI & DS Department</strong></p>
+        </div>
+    </div>
+
+    <div id="tools" class="tabcontent">
+        <h2>Tools Used</h2>
+        <div class="tools-content">
+            <p class="powerbi">Power BI</p>
+            <p class="excel">MS Excel</p>
+            <p class="html">HTML & CSS & JS</p>
+            <p class="brain">Obviosuly our brain also</p>
+        </div>
+    </div>
+
+    <div id="techstack" class="tabcontent">
+        <h2>Tech Stack</h2>
+        <p>Details about the tech stack...</p>
+    </div>
+
+    <div id="contact" class="tabcontent">
+        <h2>Contact</h2>
+        <div class="contact-content">
+            <p>Email: rohith.22ads@sonatech.ac.in</p>
+            <p>Mobile: +91 9025199658</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thank you for visiting our website!</p>
+    </footer>
+
+    <script>
+        openTab('home');
+    </script>
+
+</body>
+
+</html>
